@@ -21,7 +21,7 @@ from todo.views import TodoListAPIView, TodoDetailAPIView
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name="index.html")),
-    url(r'^api/$', TodoListAPIView.as_view(), name="api_list_view" ),
-    url(r'^api/new-todo/(?P<pk>\d+)/$', TodoDetailAPIView.as_view(), name="api_detail_view")
+    url(r'^api/todos/$', TodoListAPIView.as_view(), name="api_list_view" ),
+    url(r'^api/todos/(?P<pk>\d+)/$', TodoDetailAPIView.as_view(), name="api_detail_view")
 
 ]
